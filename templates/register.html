@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> register </title>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body>
+        <div class="registercontent" align="center">
+            <div class="registertop">
+                <h1>ЗАПОЛНИТЬ ФОРМУ</h1>
+            </div></br></br>
+            <div class="registerbottom">
+            <form action="{{ url_for('register')}}" method="post" autocomplete="off">
+            <div class="msg">{{ msg }}</div>
+            <input type="text" name="username" placeholder="ВАШЕ ИМЯ" class="textbox" id="username" required></br></br>
+            <input type="password" name="password" placeholder="ВАШ ПАРОЛЬ" class="textbox" id="password" required></br></br>
+            <input type="email" name="email" placeholder="ВАША ПОЧТА" class="textbox" id="email" required></br></br>
+            <input type="text" name="organisation" placeholder="ВАШ ПОЛ" class="textbox" id="organisation" required></br></br>
+            <input type="text" name="address" placeholder="ВАША РАСА" class="textbox" id="address" required></br></br>
+            <input type="text" name="city" placeholder="ВАШ ГОРОД" class="textbox" id="city" required></br></br>
+            <input type="text" name="state" placeholder="ВАШ АДРЕС" class="textbox" id="state" required></br></br>
+            <input type="text" name="country" placeholder="ВАША СТРАНА" class="textbox" id="country" required></br></br>
+            <input type="text" name="postalcode" placeholder="ВВЕДИТЕ ВАШ ID" class="textbox" id="postalcode" required></br></br>
+            <input type="submit" class="btn" value="ОТПРАВИТЬ">
+            </form>
+            <p class="worddark">УЖЕ ЗАПОЛНЯЛИ??? <a class="worddark" href="{{ url_for('login')}}">ЗАЙДИТЕ СЮДА</a></p>
+            </div>
+        </div>
+    </body>
+</html>
